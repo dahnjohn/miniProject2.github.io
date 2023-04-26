@@ -1,38 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Raleway", Sans-serif;
+    overflow-x: hidden;
+}
+nav{
+    font-family: "Raleway", Sans-serif;
+}
 .textLogo{
     letter-spacing: -1px;
 }
-.navLink{
-    color: white;
+.nav-hero{
+    background-image:url("img/topBg.png");
+    background-size: contain;
 }
-
-.navLink:hover{
-    color: #2CBCA5;
+.topMainBG{
+    position: relative;
+    width: 100%;
 }
-
-.toP{
-    background-image:url("../img/topBg.png");
-    background-size:cover;
-    background-repeat:no-repeat;
-    
+.topMain{
+    position: absolute;
+    width: 33%;
+    right: 155px;
 }
-
-.btnLogin{
-    padding: 4px 30px ;
-}
-
-.heroSection{
-    margin-top: 90px;
-}
-
-.playCollect{
-    font-size: 16px;
-    font-family: 'Inter', sans-serif;
-    color: #2CBCA5;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-.sloGan{
+.slogan{
     color: #FFFFFF;
     font-family: "Raleway", Sans-serif;
     font-size: 60px;
@@ -41,39 +35,27 @@
     letter-spacing: 0px;
     max-width: 450px;
 }
-
-.subSlogan{
-    color: #848296;
-    font-family: "DM Sans", Sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.7em;
-    max-width: 450px;
+.navbar-nav .nav-item{
+    color: #fff;
 }
-
-.btnDis{
+.buyMerch{
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    color: #2CBCA5;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.shop-now a{
     font-family: "Raleway", Sans-serif;
     font-size: 18px;
     font-weight: 600;
+    text-decoration: none;
     letter-spacing: 0.5px;
     fill: #020710;
     color: #020710;
     background-color: transparent;
     background-image: linear-gradient(90deg, #E75469 0%, #A93EF8 100%);
-    border-radius: 10px 10px 10px 10px;
+    border-radius:50px;
     box-shadow: 0px 4px 20px 0px rgba(169.00000000000017, 62, 248, 0.23921568627450981);
     padding: 15px 45px 15px 45px;
-}
-
-.topSide{
-    /* background-image:url("../img/topMainBG.png"); */
-    background-size:cover;
-    background-repeat:no-repeat;
-    position: relative;
-    height: 600px;
-}
-
-.imgBG{
-    position:absolute;
-    width: 450px;
 }
