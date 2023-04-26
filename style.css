@@ -17,6 +17,11 @@ nav{
     background-image:url("img/topBg.png");
     background-size: contain;
 }
+.login-btn{
+    border: 1px solid #fff;
+    border-radius: 50px;
+    margin: 0 25px;
+}
 .topMainBG{
     position: relative;
     width: 100%;
@@ -25,6 +30,26 @@ nav{
     position: absolute;
     width: 33%;
     right: 155px;
+    filter: drop-shadow(5px 5px 5px #757575);
+    transform: translatey(0px);
+    animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+	0% {
+    -webkit-filter: drop-shadow(5px 5px 5px #757575);
+    filter: drop-shadow(5px 5px 5px #757575);;
+		transform: translatey(0px);
+	}
+	50% {
+    -webkit-filter: drop-shadow(5px 5px 5px #757575);
+    filter: drop-shadow(5px 5px 5px #757575);
+		transform: translatey(-40px);
+	}
+	100% {
+    -webkit-filter: drop-shadow(5px 5px 5px #757575);
+    filter: drop-shadow(5px 5px 5px #757575);
+		transform: translatey(0px);
+	}
 }
 .slogan{
     color: #FFFFFF;
