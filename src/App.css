@@ -1,0 +1,12 @@
+body{
+  background-color:  #07071B;
+
+}
+
+.toP{
+  background-image:url("./images/topBg.png");
+  background-size:cover;
+  background-repeat:no-repeat;
+  
+  
+}

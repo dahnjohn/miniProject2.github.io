@@ -1,0 +1,16 @@
+.textLogo{
+    letter-spacing: -1px;
+}
+
+.navLink{
+    color: white;
+}
+
+.navLink:hover{
+    color: #2CBCA5;
+}
+
+.btnLogin{
+    padding: 4px 30px ;
+}
+
