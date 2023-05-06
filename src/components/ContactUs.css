@@ -1,0 +1,12 @@
+.featureBG{
+    background-image:url("../images/featureBG.png");
+}
+.contact {
+    margin: 150px 300px;
+}
+.form-group label{
+    color: #fff;
+}
+.form-group textarea {
+    border-radius: 10px;
+}

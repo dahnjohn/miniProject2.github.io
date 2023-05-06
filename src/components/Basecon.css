@@ -1,6 +1,6 @@
 
 .baseConContainer{
-margin-top: 40px;
+margin: 100px 50px;
 }
 
 .baseconImgBG{
@@ -10,10 +10,31 @@ margin-top: 40px;
     height: 400px;
 }
 
+
 .rockMan{
     position:absolute;
-    width: 200px;
+    width: 250px;
     height: auto;
+    filter: drop-shadow(5px 5px 5px #404040);
+    transform: translatey(0px);
+    animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+    0% {
+    -webkit-filter: drop-shadow(5px 5px 5px #404040);
+    filter: drop-shadow(5px 5px 5px #404040);;
+        transform: translatey(0px);
+    }
+    50% {
+    -webkit-filter: drop-shadow(5px 5px 5px #404040);
+    filter: drop-shadow(5px 5px 5px #404040);
+        transform: translatey(-20px);
+    }
+    100% {
+    -webkit-filter: drop-shadow(5px 5px 5px #404040);
+    filter: drop-shadow(5px 5px 5px #404040);
+        transform: translatey(0px);
+    }
 }
 
 .baseConcept{

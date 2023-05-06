@@ -6,6 +6,11 @@ import Hero from './components/Hero';
 import Stats from "./components/Statistic";
 import Basecon from "./components/Basecon";
 import Feature from "./components/Feature";
+import ContactUs from './components/ContactUs';
+import FooterSec from './components/FooterSec';
+
+import '@fortawesome/fontawesome-svg-core/styles.css';
+
 
 function App() {
   return (
@@ -15,14 +20,14 @@ function App() {
       <Hero />
       </div>
 
-      <Stats />
       <Basecon />
       <Feature/>
+      <Stats />
+      <ContactUs />
+      <FooterSec />
 
 
     </>
-    
-     
 
     
   );

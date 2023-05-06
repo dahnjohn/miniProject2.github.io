@@ -40,7 +40,9 @@
     box-shadow: 0px 4px 20px 0px rgba(169.00000000000017, 62, 248, 0.23921568627450981);
     padding: 15px 45px 15px 45px;
 }
-
+.btnDis:hover{
+    color: #fff;
+}
 .topSide{
     /* background-image:url("../img/topMainBG.png"); */
     background-size:cover;
@@ -55,11 +57,25 @@
     height: auto;
     /* top: 200px; */
 }
-
-.heroLine{
-    height:1px;
-    border-width:0;
-    color:white;
-    background-color:white;
-    
+.imgBG{
+    filter: drop-shadow(5px 5px 5px #757575);
+    transform: translatey(0px);
+    animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+    0% {
+    -webkit-filter: drop-shadow(5px 5px 5px #757575);
+    filter: drop-shadow(5px 5px 5px #757575);;
+        transform: translatey(0px);
+    }
+    50% {
+    -webkit-filter: drop-shadow(5px 5px 5px #757575);
+    filter: drop-shadow(5px 5px 5px #757575);
+        transform: translatey(-50px);
+    }
+    100% {
+    -webkit-filter: drop-shadow(5px 5px 5px #757575);
+    filter: drop-shadow(5px 5px 5px #757575);
+        transform: translatey(0px);
+    }
 }

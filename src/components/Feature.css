@@ -1,3 +1,6 @@
 .featureBG{
     background-image:url("../images/featureBG.png");
 }
+.featureContainer{
+    margin: 100px 50px;
+}

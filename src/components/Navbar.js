@@ -8,43 +8,35 @@ export default function Nabvar() {
     <>
     
     <div className="row">
-    <nav className="navbar navbar-expand-lg mt-3 px-1">
-    <div className="container-fluid">
-    <a className="navbar-brand text-light fw-bold fs-2 textLogo" href="#">Dahn Logo</a>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                  </button>
-    
-                  <div className="collapse navbar-collapse nav justify-content-end" id="navbarSupportedContent">
-                  <ul className="navbar-nav mb-2 mb-lg-0 nav nav-underline" >
-    <li className="nav-item">
-                        <a className="nav-link  me-4 fw-medium navLink" aria-current="page" href="#">Home</a>
-                      </li>
-
-        <li className="nav-item">
-                        <a className="nav-link me-4 fw-medium navLink" aria-current="page" href="#">About Us</a>
-                      </li>
-        
-                      <li className="nav-item">
-                        <a className="nav-link me-4 fw-medium navLink" aria-current="page" href="#">Our Team</a>
-                      </li>
-
-                      <li className="nav-item">
-                        <a className="nav-link me-4 fw-medium navLink" aria-current="page" href="#">Contact Us</a>
-                      </li>
-
-                      <li className="nav-item">
-                        <a className="nav-link me-4 fw-medium navLink" aria-current="page" href="#">Blog</a>
-                      </li>
-
-                      <li className="nav-item">
-                        <button className="btn btn-outline-light rounded-5 btnLogin fw-medium" type="submit">Login</button>
-                      </li>
-
-    </ul>
-    </div>
-    </div>
-    </nav>
+      <div className="container mb-5">
+        <div className="col-md-12">
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand text-light textLogo" href="#">Lady Dahny</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link navLink" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link navLink" href="#">Shop</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link navLink" href="#">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link navLink" href="#">Contact</a>
+                  </li>
+                  <li class="nav-item li-btnLogin">
+                    <a class="btnLogin" href="#">Login</a>
+                  </li>
+                </ul>
+              </div>
+          </nav>
+        </div>
+      </div>
     </div>
 
     </>
