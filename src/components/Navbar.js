@@ -1,12 +1,10 @@
-import React from "react";
+import React from 'react';
+
 import "./Navbar.css";
 
-
-
-export default function Nabvar() {
+export default function Navbar() {
   return (
     <>
-    
     <section id="home">
     <div className="row">
       <div className="container mb-5">
@@ -30,6 +28,9 @@ export default function Nabvar() {
                   <li class="nav-item">
                     <a class="nav-link navLink" href="#contact">Contact</a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link navLink" href="#">Register</a>
+                  </li>
                   <li class="nav-item li-btnLogin">
                     <a class="btnLogin" href="#">Login</a>
                   </li>
@@ -40,7 +41,6 @@ export default function Nabvar() {
       </div>
     </div>
     </section>
-
     </>
-    );
-  }
+  );
+}

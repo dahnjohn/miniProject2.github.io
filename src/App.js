@@ -11,7 +11,6 @@ import FooterSec from './components/FooterSec';
 
 import '@fortawesome/fontawesome-svg-core/styles.css';
 
-
 function App() {
   return (
     <>
@@ -25,7 +24,6 @@ function App() {
       <Stats />
       <ContactUs />
       <FooterSec />
-
 
     </>
 
