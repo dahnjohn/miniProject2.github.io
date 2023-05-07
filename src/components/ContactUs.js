@@ -1,10 +1,44 @@
-import React from "react";
-
+import React, { useState } from 'react';
+import $ from 'jquery';
 import "./ContactUs.css";
 
+function SubForm(e, setError) {
+    e.preventDefault();
+    $.ajax({
+        url: 'https://api.apispreadsheets.com/data/sq53fz05q8NRHC2v/',
+        type: 'post',
+        data: $('#myForm').serializeArray(),
+        success: function () {
+            alert('Form Data Submitted :)');
+        },
+        error: function () {
+            setError('There was an error :(');
+        },
+        });
+    }
+
 export default function ContactUs() {
+    const [error, setError] = useState('');
+
+    function handleSubmit(e) {
+      // Perform validation
+    const form = $('#myForm')[0];
+    const name = form['full_name'].value;
+    const email = form['email'].value;
+    const phone = form['phone'].value;
+    const message = form['message'].value;
+
+    if (!name || !email || !phone || !message) {
+        setError('Please fill out all fields.');
+        return;
+    }
+
+    SubForm(e, setError);
+}
+
     return (
     <>
+    <section id="contact">
         <div className="container">
             <div className="row mt-5">
             <div className="col-md-12">
@@ -26,19 +60,18 @@ export default function ContactUs() {
                         <div className="form-group mb-5">
                             <label htmlFor="message">Message:</label>
                             <br />
-                            <textarea name="message" id="message" cols="92" />
+                            <textarea name="message" id="message" cols="78" />
                         </div>
-
-                        {/* <!-- hidden --> */}
-                        <input type="hidden" id="city" name="city" className="form-control" />
-                        <input type="hidden" id="country" name="country" className="form-control" />
-                        <input type="hidden" id="postal" name="postal" className="form-control" />
+                        <br />
+                        {error && <p style={{ color: 'red' }}>{error}</p>}
+                        <br />
                     </form>
-                    {/* <button onClick={() => SubForm()}>Submit</button> */}
+                    <button onClick={handleSubmit}>Submit</button>
                 </div>
             </div>
             </div>
         </div>
+    </section>
     </>
     );
 }

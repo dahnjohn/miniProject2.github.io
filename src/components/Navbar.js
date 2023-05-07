@@ -7,6 +7,7 @@ export default function Nabvar() {
   return (
     <>
     
+    <section id="home">
     <div className="row">
       <div className="container mb-5">
         <div className="col-md-12">
@@ -18,16 +19,16 @@ export default function Nabvar() {
               <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                   <li class="nav-item active">
-                    <a class="nav-link navLink" href="#">Home</a>
+                    <a class="nav-link navLink" href="#home">Home</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link navLink" href="#">Shop</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link navLink" href="#">About</a>
+                    <a class="nav-link navLink" href="#about">About</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link navLink" href="#">Contact</a>
+                    <a class="nav-link navLink" href="#contact">Contact</a>
                   </li>
                   <li class="nav-item li-btnLogin">
                     <a class="btnLogin" href="#">Login</a>
@@ -38,6 +39,7 @@ export default function Nabvar() {
         </div>
       </div>
     </div>
+    </section>
 
     </>
     );
