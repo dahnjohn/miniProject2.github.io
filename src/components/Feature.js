@@ -23,7 +23,7 @@ export default function Feature(){
                 <div className="col-md-6">
                     <div className="p-5">
                     <img className="baseconImgBG" src={BaseconImg} alt="BaseconImg"/>
-                    <img className="rockMan" src={RockMan} alt="RockMan"/>
+                    <img className="rockMan2" src={RockMan} alt="RockMan"/>
                     </div>
                 
                 </div>

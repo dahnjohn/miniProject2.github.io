@@ -4,3 +4,12 @@
 .featureContainer{
     margin: 100px 50px;
 }
+.rockMan2{
+    position:absolute;
+    right: 60px;
+    width: 250px;
+    height: auto;
+    filter: drop-shadow(5px 5px 5px #404040);
+    transform: translatey(0px);
+    animation: float 6s ease-in-out infinite;
+}
