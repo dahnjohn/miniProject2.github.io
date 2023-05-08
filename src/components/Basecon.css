@@ -13,6 +13,7 @@ margin: 100px 50px;
 
 .rockMan{
     position:absolute;
+    left: 537px;
     width: 250px;
     height: auto;
     filter: drop-shadow(5px 5px 5px #404040);
