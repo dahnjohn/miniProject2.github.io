@@ -26,7 +26,9 @@ function App() {
       <Feature/>
       </div>
 
+      <div className="container-fluid battleCollectionBG">
       <BattleCollection />
+      </div>
 
       <Stats />
       <ContactUs />
