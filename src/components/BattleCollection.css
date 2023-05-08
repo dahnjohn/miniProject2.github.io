@@ -1,0 +1,35 @@
+.BattleCollectPic1Img{
+    background-size:cover;
+    background-repeat:no-repeat;
+    position: relative;
+    height: 400px;
+}
+
+
+.BattleCollectionTittle{
+    text-align: left;
+    color: #2CBCA5;
+    font-family: "Inter", Sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.4em;
+    letter-spacing: 1px;
+}
+
+.BattleCollectionFind{
+    color: #FFFFFF;
+    font-family: "Raleway", Sans-serif;
+    font-size: 43px;
+    font-weight: 600;
+    line-height: 1.1em;
+    letter-spacing: 0px;
+}
+
+.BattleCollectionDesc{
+    color: #848296;
+    font-family: "DM Sans", Sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.9em;
+}

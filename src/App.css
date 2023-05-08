@@ -7,6 +7,10 @@ body{
   background-image:url("./images/topBg.png");
   background-size:cover;
   background-repeat:no-repeat;
-  
-  
+}
+
+.featuresBg{
+  background-image:url("./images/featuresBg.png");
+  background-size:cover;
+  background-repeat:no-repeat;
 }

@@ -1,36 +1,98 @@
 import React from "react";
 
 import "./Feature.css";
-import BaseconImg from "../images/baseConImg.png";
-import RockMan from "../images/rockMan.png";
+import FeaturesPic1 from "../images/featuresPic1.png"
+import FeaturesPic2 from "../images/featuresPic2.png"
+import FeaturesPic3 from "../images/featuresPic3.png"
+import FeaturesPic4 from "../images/featuresPic4.png"
+import FeaturesPic5 from "../images/featuresPic5.png"
+import FeaturesPic6 from "../images/featuresPic6.png"
+
 
 export default function Feature(){
     return(
         <>
-        <div className="container-fluid featureBG">
-            <div className="row featureContainer">
+        
+           
+         
 
-                <div className="col-md-6 p-5">
-                    <p className="baseConcept">Base Concept</p>
-                    <h2 className="baseConceptTittle">Merch collector and autobattler game</h2>
-                    <p className="baseConceptDesc">Discover over 200+ magical artifacts, hunt the deadly beasts that rule 
-                        this magical world, each with magical powers and unique abilities. 
-                        Train and unite your wizards into powerful guilds to increase their power 
-                        and value to you to create the perfect team.</p>
-                        <button type="button" className="btn btnDis mt-3">Shop Now</button>
-                </div>
-
-                <div className="col-md-6">
-                    <div className="p-5">
-                    <img className="baseconImgBG" src={BaseconImg} alt="BaseconImg"/>
-                    <img className="rockMan" src={RockMan} alt="RockMan"/>
-                    </div>
-                
-                </div>
-
-            </div>
+        <div className="container featuresCon">
+        <div className="row">
+        <p className="featuresTittle">Features</p>
+        <h2 className="featuresPte">Play to enjoy</h2>
+        <p className="featuresDesc">Discover over 200+ magical artifacts, hunt deadly beasts with incredible strength and unique abilities.	</p>
         </div>
-        </>
+        
+        <div className="row">
 
-    )
-}
+        <div className="col-md-4">
+        <div className="featuresCard">
+        <img src={FeaturesPic1} class="card-img-top featuresCard-img" alt="..."/>
+        <div className="card-body">
+        <h5 className="featuresCard-title">Collect crystals</h5>
+        <p className="featuresCard-text">Discover over 200+ magical artifacts, hunt deadly beasts with incredible strength and unique abilities.</p>
+        </div>
+        </div>
+        </div>
+
+        <div className="col-md-4">
+        <div className="featuresCard">
+        <img src={FeaturesPic2} className="card-img-top featuresCard-img" alt="..."/>
+        <div className="card-body">
+        <h5 className="featuresCard-title">Fight creatures</h5>
+        <p className="featuresCard-text">Discover over 200+ magical artifacts, hunt deadly beasts with incredible strength and unique abilities.</p>
+        </div>
+        </div>
+        </div>
+
+        <div className="col-md-4">
+        <div className="featuresCard">
+        <img src={FeaturesPic3} className="card-img-top featuresCard-img" alt="..."/>
+        <div className="card-body">
+        <h5 className="featuresCard-title">Learn potions</h5>
+        <p className="featuresCard-text">Discover over 200+ magical artifacts, hunt deadly beasts with incredible strength and unique abilities.</p>
+        </div>
+        </div>
+        </div>
+        </div>
+
+        <div className="row mt-4">
+
+<div className="col-md-4">
+<div className="featuresCard">
+<img src={FeaturesPic4} class="card-img-top featuresCard-img" alt="..."/>
+<div className="card-body">
+<h5 className="featuresCard-title">Look for artifacts</h5>
+<p className="featuresCard-text">Discover over 200+ magical artifacts, hunt deadly beasts with incredible strength and unique abilities.</p>
+</div>
+</div>
+</div>
+
+<div className="col-md-4">
+<div className="featuresCard">
+<img src={FeaturesPic5} className="card-img-top featuresCard-img" alt="..."/>
+<div className="card-body">
+<h5 className="featuresCard-title">Find creatures</h5>
+<p className="featuresCard-text">Discover over 200+ magical artifacts, hunt deadly beasts with incredible strength and unique abilities.</p>
+</div>
+</div>
+</div>
+
+<div className="col-md-4">
+<div className="featuresCard">
+<img src={FeaturesPic6} className="card-img-top featuresCard-img" alt="..."/>
+<div className="card-body">
+<h5 className="featuresCard-title">Collect herbs</h5>
+<p className="featuresCard-text">Discover over 200+ magical artifacts, hunt deadly beasts with incredible strength and unique abilities.</p>
+</div>
+</div>
+</div>
+</div>
+
+        </div>
+
+        
+        </>
+        
+        )
+    }

@@ -8,6 +8,7 @@ import Basecon from "./components/Basecon";
 import Feature from "./components/Feature";
 import ContactUs from './components/ContactUs';
 import FooterSec from './components/FooterSec';
+import BattleCollection from "./components/BattleCollection";
 
 import '@fortawesome/fontawesome-svg-core/styles.css';
 
@@ -20,7 +21,13 @@ function App() {
       </div>
 
       <Basecon />
+      
+      <div className="container-fluid featuresBg">
       <Feature/>
+      </div>
+
+      <BattleCollection />
+
       <Stats />
       <ContactUs />
       <FooterSec />
