@@ -3,6 +3,7 @@ import { Button, Modal } from 'react-bootstrap';
 import "./Navbar.css";
 import RegistrationForm from './RegistrationForm';
 import LoginForm from './LoginForm';
+import {BrowserRouter} from 'react-router-dom';
 
 export default function Navbar() {
   const [showModal, setShowModal] = useState(false);
@@ -63,6 +64,7 @@ export default function Navbar() {
     </div>
   </section>
   {/* modal registration */}
+  <BrowserRouter>
   <Modal show={showModal} onHide={handleCloseModal}>
     <Modal.Header closeButton>
       <Modal.Title>Registration Form</Modal.Title>
@@ -71,8 +73,10 @@ export default function Navbar() {
       <RegistrationForm />
     </Modal.Body>
   </Modal>
+  </BrowserRouter>
 
   {/* modal login */}
+  <BrowserRouter>
   <Modal show={showModal2} onHide={handleCloseModal2}>
     <Modal.Header closeButton>
       <Modal.Title>Login Form</Modal.Title>
@@ -81,6 +85,7 @@ export default function Navbar() {
       <LoginForm />
     </Modal.Body>
   </Modal>
+  </BrowserRouter>
 </>
 );
 }
