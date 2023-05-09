@@ -1,71 +1,100 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Form, Button } from 'react-bootstrap';
+import $ from 'jquery';
 import Swal from 'sweetalert2';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
+function SubFormLogin(e, setError, setIsLoggedIn) {
+  e.preventDefault();
+  $.ajax({
+    url: 'https://api.apispreadsheets.com/data/IO2kaF19XyvzB2UZ/',
+    type: 'get',
+    data: $('#loginForm').serializeArray(),
+    success: function (data) {
+      const queryResult = data['data'];
+      if (queryResult.length > 0) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Login Successful!',
+          showConfirmButton: false,
+          timer: 1500
+        });
+        setIsLoggedIn(true); // update the isLoggedIn state variable
+      } else {
+        setError('Invalid email or password');
+      }
+    },
+    error: function () {
+      setError('There was an error :(');
+    },
+  });
+}
 
 const LoginForm = () => {
-  const [formData, setFormData] = useState({
-    email: '',
-    password: '',
-  });
 
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setFormData({ ...formData, [name]: value });
-  };
+  const [error, setError] = useState('');
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // add a state variable for isLoggedIn
+  const navigate = useNavigate();
+  const formRef = useRef(null);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(formData);
-
-    const email = formData.email;
-    const password = formData.password;
-
-    const Email = localStorage.getItem('email');
-    const Password = localStorage.getItem('password');
-
-    if (email === '' && password === '') {
-      Swal.fire('Opps..!', 'input field has no value!', 'error');
-    } else {
-      if (email === email && password === password) {
-        Swal.fire('Good job!', 'login successful!', 'success');
-        setTimeout(() => {
-          window.location.href = 'https://www.google.com';
-        }, 1000);
-      } else {
-        Swal.fire('Opps..!', 'Something is wrong!', 'error');
-      }
+  async function handleSubmitLogin(e) {
+    e.preventDefault();
+  
+    // Perform validation
+    const form = $('#loginForm')[0];
+    const email = form['email'].value;
+    const password = form['password'].value;
+  
+    if (!email || !password) {
+      setError('Please fill out all fields.');
+      return;
     }
-  };
-
+  
+    // Check if email and password match existing data
+    const query = `select * where Email='${email}' and Password='${password}'`;
+    const url = `https://api.apispreadsheets.com/data/IO2kaF19XyvzB2UZ/?query=${encodeURIComponent(query)}`;
+    const response = await fetch(url);
+    const data = await response.json();
+  
+    // Submit form data
+    if (data.data.length > 0) {
+      SubFormLogin(e, setError, setIsLoggedIn);
+      formRef.current.reset();
+    } else {
+      setError('Invalid email or password');
+    }
+  }
+  
+  // render the modal only if isLoggedIn is false
   return (
-    <Form onSubmit={handleSubmit}>
-      <Form.Group controlId="formEmail">
-        <Form.Label>Email address</Form.Label>
-        <Form.Control
-          type="email"
-          name="email"
-          id="email"
-          value={formData.email}
-          onChange={handleInputChange}
-          required
-        />
-      </Form.Group>
-      <Form.Group controlId="formPassword">
-        <Form.Label>Password</Form.Label>
-        <Form.Control
-          type="password"
-          name="password"
-          id="password"
-          value={formData.password}
-          onChange={handleInputChange}
-          required
-        />
-      </Form.Group>
-      <Button variant="primary" type="submit" className="login">
-        Login
-      </Button>
-    </Form>
+    <>
+      {!isLoggedIn && (
+        <Form id="loginForm" ref={formRef}>
+          <Form.Group controlId="formEmail">
+            <Form.Label>Email address</Form.Label>
+            <Form.Control
+              type="email"
+              name="email"
+              id="email"
+              required
+            />
+          </Form.Group>
+          <Form.Group controlId="formPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control
+              type="password"
+              name="password"
+              id="password"
+              required
+            />
+          </Form.Group>
+          {error && <div className="error">{error}</div>}
+          <Button variant="primary" type="submit" onClick={handleSubmitLogin}>
+            Login
+          </Button>
+        </Form>
+      )}
+    </>
   );
 };
 

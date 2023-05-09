@@ -1,62 +1,83 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Form, Button } from 'react-bootstrap';
+import $ from 'jquery';
 import Swal from 'sweetalert2';
-import { useNavigate } from 'react-router-dom';
-import './LoginForm';
+import { useNavigate} from 'react-router-dom';
+// import '/';
 
+function SubFormReg(e, setError) {
+  e.preventDefault();
+  $.ajax({
+    url: 'https://api.apispreadsheets.com/data/IO2kaF19XyvzB2UZ/',
+    type: 'post',
+    data: $('#regForm').serializeArray(),
+    success: function () {
+      Swal.fire({
+        icon: 'success',
+        title: 'Form Data Submitted :)',
+        showConfirmButton: false,
+        timer: 1500
+      });
+      
+    },
+    error: function () {
+      setError('There was an error :(');
+    },
+  });
+}
 
 const RegistrationForm = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    password: '',
-    cpassword: '',
-  });
 
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
+  const [error, setError] = useState('');
   const navigate = useNavigate();
+  const formRef = useRef(null);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const { name, email, password, cpassword } = formData;
-
-    localStorage.setItem('name', name);
-    localStorage.setItem('email', email);
-    localStorage.setItem('password', password);
-    localStorage.setItem('cpassword', cpassword);
-
-    if (name === '' || email === '' || password === '' || cpassword === '') {
-      Swal.fire('Opps..!', 'input field has no value!', 'error');
-    } else {
-      if (password.length >= 6 && password.length <= 20) {
-        if (password !== cpassword) {
-          Swal.fire('Opps..!', 'Password not matching!', 'error');
-        } else {
-          Swal.fire('Good job!', 'Register successful!', 'success');
-          setTimeout(() => {
-            navigate('/LoginForm');
-          }, 5000);
-        }
-      } else {
-        Swal.fire('Opps..!', 'Input mim six digit password!', 'error');
-      }
+  async function handleSubmitReg(e) {
+    e.preventDefault();
+  
+    // Perform validation
+    const form = $('#regForm')[0];
+    const name = form['name'].value;
+    const email = form['email'].value;
+    const password = form['password'].value;
+    const cpassword = form['cpassword'].value;
+  
+    if (!name || !email || !password || !cpassword) {
+      setError('Please fill out all fields.');
+      return;
     }
-  };
+  
+    if (password !== cpassword) {
+      setError('Passwords do not match.');
+      return;
+    }
+  
+    // Check if data already exists
+    const query = `select * where name='${name}' and email='${email}'`;
+    const url = `https://api.apispreadsheets.com/data/IO2kaF19XyvzB2UZ/?query=${encodeURIComponent(query)}`;
+    const response = await fetch(url);
+    const data = await response.json();
+  
+    if (data.data.length > 0) {
+      setError('Data already exists.');
+      return;
+    }
+  
+    // Submit form data
+    SubFormReg(e, setError);
+    navigate('/'); // navigate to success page
+    formRef.current.reset();
+  }
+  
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form id="regForm" ref={formRef}>
       <Form.Group controlId="formName">
         <Form.Label>Name</Form.Label>
         <Form.Control
           type="text"
           name="name"
           id="name"
-          value={formData.name}
-          onChange={handleInputChange}
           required
         />
       </Form.Group>
@@ -66,8 +87,6 @@ const RegistrationForm = () => {
           type="email"
           name="email"
           id="email"
-          value={formData.email}
-          onChange={handleInputChange}
           required
         />
       </Form.Group>
@@ -77,8 +96,6 @@ const RegistrationForm = () => {
           type="password"
           name="password"
           id="password"
-          value={formData.password}
-          onChange={handleInputChange}
           required
         />
       </Form.Group>
@@ -88,12 +105,11 @@ const RegistrationForm = () => {
           type="password"
           name="cpassword"
           id="cpassword"
-          value={formData.cpassword}
-          onChange={handleInputChange}
           required
         />
       </Form.Group>
-      <Button variant="primary" type="submit" className="sub-button">
+      {error && <div className="error">{error}</div>}
+      <Button variant="primary" type="submit" onClick={handleSubmitReg}>
         Register
       </Button>
     </Form>
