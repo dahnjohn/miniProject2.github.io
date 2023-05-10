@@ -20,3 +20,10 @@ body{
   background-size:cover;
   background-repeat:no-repeat;
 }
+
+.regNow{
+  background-image:url("./images/regNowBG.png");
+  background-size:cover;
+  background-repeat:no-repeat;
+  border-radius: 20px;
+}
