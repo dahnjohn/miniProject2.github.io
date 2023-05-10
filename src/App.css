@@ -27,3 +27,10 @@ body{
   background-repeat:no-repeat;
   border-radius: 20px;
 }
+
+.joinNowCon{
+  background-image:url("./images/joinNow.png");
+  background-size:cover;
+  background-repeat:no-repeat;
+  border-radius: 20px;
+}

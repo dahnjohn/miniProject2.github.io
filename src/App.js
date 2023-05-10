@@ -10,6 +10,8 @@ import ContactUs from './components/ContactUs';
 import FooterSec from './components/FooterSec';
 import BattleCollection from "./components/BattleCollection";
 import RegNow from "./components/RegNow";
+import Testimonial from "./components/Testimonial";
+import JoinNow from "./components/JoinNow";
 
 import '@fortawesome/fontawesome-svg-core/styles.css';
 
@@ -35,6 +37,13 @@ function App() {
       <RegNow />
       </div>
 
+      <div className="container-fluid featuresBg">
+      <Testimonial />
+      </div>
+
+      <div className="container joinNowCon">
+      <JoinNow />
+      </div>
       <Stats />
       <ContactUs />
       <FooterSec />

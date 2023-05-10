@@ -1,0 +1,22 @@
+.joinNowRow{
+    margin-top: 80px;
+    padding: 100px 380px;
+}
+
+.joinNowTittle{
+    text-align: center;
+    color: #FFFFFF;
+    font-family: "Raleway", Sans-serif;
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 1.3em;
+    letter-spacing: 0px;
+}
+
+.joinNowDesc{
+    color: #A2A1B2;
+    font-family: "DM Sans", Sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.9em;
+}
