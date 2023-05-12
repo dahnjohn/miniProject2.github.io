@@ -1,56 +1,28 @@
-import React from "react";
-
-import "./App.css";
-import Nabvar from './components/Navbar';
-import Hero from './components/Hero';
-import Stats from "./components/Statistic";
-import Basecon from "./components/Basecon";
-import Feature from "./components/Feature";
-import ContactUs from './components/ContactUs';
-import FooterSec from './components/FooterSec';
-import BattleCollection from "./components/BattleCollection";
-import RegNow from "./components/RegNow";
-import Testimonial from "./components/Testimonial";
-import JoinNow from "./components/JoinNow";
-
-import '@fortawesome/fontawesome-svg-core/styles.css';
+import React from 'react';
+import './App.css';
+import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './components/pages/Home';
+import Shop from './components/pages/Shop';
+import About from './components/pages/About';
+import RegistrationForm from './components/pages/RegistrationForm';
+import LoginForm from './components/pages/LoginForm';
 
 function App() {
   return (
     <>
-    <div className="container-fluid toP"> 
-      <Nabvar />
-      <Hero />
-      </div>
-
-      <Basecon />
-      
-      <div className="container-fluid featuresBg">
-      <Feature/>
-      </div>
-
-      <div className="container-fluid battleCollectionBG">
-      <BattleCollection />
-      </div>
-
-      <div className="container regNow">
-      <RegNow />
-      </div>
-
-      <div className="container-fluid featuresBg">
-      <Testimonial />
-      </div>
-
-      <div className="container joinNowCon">
-      <JoinNow />
-      </div>
-      <Stats />
-      <ContactUs />
-      <FooterSec />
-
+    <Router>
+      < Navbar />
+    <Routes>
+      {/* old ver of Switch */}
+        <Route path="/" exact Component={Home}/>
+        <Route path='/shop' exact Component={Shop} />
+        <Route path='/about' exact Component={About} />
+        <Route path='/registration-form' exact Component={RegistrationForm} />
+        <Route path='/login-form' exact Component={LoginForm} />
+      </Routes>
+    </Router>
     </>
-
-    
   );
 }
 

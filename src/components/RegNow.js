@@ -1,5 +1,4 @@
 import React from "react";
-
 import "./RegNow.css";
 
 export default function RegNow() {
