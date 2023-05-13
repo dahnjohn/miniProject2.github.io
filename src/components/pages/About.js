@@ -1,6 +1,14 @@
-import React from 'react'
-// import '../../App.css';
+import React from 'react';
+import AboutHeader from '../AboutHeader';
+import FooterSec from '../FooterSec';
 
-export default function About() {
-    return <h1 className='about'>ABOUT</h1>;
+
+function Shop() {
+    return (
+        <>
+        <AboutHeader />
+        <FooterSec />
+        </>
+    );
 }
+export default Shop;

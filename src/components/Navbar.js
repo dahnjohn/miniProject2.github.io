@@ -24,10 +24,10 @@ function Navbar() {
                                 <Link to="shop" class="nav-link navLink">Shop</Link>
                             </li>
                             <li class="nav-item">
-                                <Link to="/about" class="nav-link navLink" href="#about">About</Link>
+                                <Link to="/about" class="nav-link navLink">About</Link>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link navLink" href="#contact">Contact</a>
+                                <Link to="/contact" class="nav-link navLink">Contact</Link>
                             </li>
                             <li class="nav-item">
                                 <Link to="/registration-form" class="nav-link navLink">Register</Link>

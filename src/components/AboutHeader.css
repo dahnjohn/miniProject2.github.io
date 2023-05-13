@@ -1,0 +1,10 @@
+.about-header{
+    background-color: #131325;
+    padding: 180px 250px;
+}
+.about-heading{
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+}

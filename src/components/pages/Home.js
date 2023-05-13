@@ -8,7 +8,6 @@ import RegNow from '../RegNow';
 import Testimonial from '../Testimonial';
 import JoinNow from '../JoinNow';
 import Stats from '../Stats';
-import ContactUs from '../ContactUs';
 import FooterSec from '../FooterSec';
 
 function Home() {
@@ -32,15 +31,16 @@ function Home() {
         </div>
 
         <div className="container-fluid featuresBg">
+            <Stats />
             <Testimonial />
+            
         </div>
 
         <div className="container joinNowCon">
             <JoinNow />
         </div>
 
-        <Stats />
-        <ContactUs />
+        
         <FooterSec />
         </>
     );

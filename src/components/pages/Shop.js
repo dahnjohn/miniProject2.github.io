@@ -1,6 +1,14 @@
-import React from 'react'
-// import '../../App.css';
+import React from 'react';
+import ShopHeader from '../ShopHeader';
+import FooterSec from '../FooterSec';
 
-export default function Shop() {
-    return <h1 className='shop'>SHOP</h1>;
+
+function Shop() {
+    return (
+        <>
+        <ShopHeader />
+        <FooterSec />
+        </>
+    );
 }
+export default Shop;
