@@ -3,6 +3,7 @@ import { Form, Button } from 'react-bootstrap';
 import $ from 'jquery';
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
+import "./LoginFormComp.css";
 
 function SubFormLogin(e, setError, setIsLoggedIn) {
   e.preventDefault();
@@ -65,14 +66,16 @@ const LoginForm = () => {
       setError('Invalid email or password');
     }
   }
-  
   // render the modal only if isLoggedIn is false
   return (
     <>
+  <div className='container'>
+    <div className='row'>
+      <div className='col-md-12 log-form'>
       {!isLoggedIn && (
-        <Form id="loginForm" ref={formRef}>
+        <Form id="loginForm" ref={formRef} style={{ color: 'red', fontFamily: 'Raleway, sans-serif,' }}>
           <Form.Group controlId="formEmail">
-            <Form.Label>Email address</Form.Label>
+            <Form.Label className='f-label'>Email address</Form.Label>
             <Form.Control
               type="email"
               name="email"
@@ -80,8 +83,9 @@ const LoginForm = () => {
               required
             />
           </Form.Group>
+          <br></br>
           <Form.Group controlId="formPassword">
-            <Form.Label>Password</Form.Label>
+            <Form.Label className='f-label'>Password</Form.Label>
             <Form.Control
               type="password"
               name="password"
@@ -89,12 +93,16 @@ const LoginForm = () => {
               required
             />
           </Form.Group>
+          <br></br>
           {error && <div className="error">{error}</div>}
-          <Button variant="primary" type="submit" onClick={handleSubmitLogin}>
+          <Button className='btnDis' type="submit" onClick={handleSubmitLogin}>
             Login
           </Button>
         </Form>
       )}
+      </div>
+    </div>
+  </div>
     </>
   );
 };

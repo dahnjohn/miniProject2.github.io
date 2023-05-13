@@ -3,7 +3,7 @@ import { Form, Button } from 'react-bootstrap';
 import $ from 'jquery';
 import Swal from 'sweetalert2';
 import { useNavigate} from 'react-router-dom';
-// import '/';
+import "./RegistrationFormComp.css";
 
 function SubFormReg(e, setError) {
   e.preventDefault();
@@ -71,48 +71,60 @@ const RegistrationForm = () => {
   
 
   return (
-    <Form id="regForm" ref={formRef}>
-      <Form.Group controlId="formName">
-        <Form.Label>Name</Form.Label>
-        <Form.Control
-          type="text"
-          name="name"
-          id="name"
-          required
-        />
-      </Form.Group>
-      <Form.Group controlId="formEmail">
-        <Form.Label>Email address</Form.Label>
-        <Form.Control
-          type="email"
-          name="email"
-          id="email"
-          required
-        />
-      </Form.Group>
-      <Form.Group controlId="formPassword">
-        <Form.Label>Password</Form.Label>
-        <Form.Control
-          type="password"
-          name="password"
-          id="password"
-          required
-        />
-      </Form.Group>
-      <Form.Group controlId="formCPassword">
-        <Form.Label>Confirm Password</Form.Label>
-        <Form.Control
-          type="password"
-          name="cpassword"
-          id="cpassword"
-          required
-        />
-      </Form.Group>
-      {error && <div className="error">{error}</div>}
-      <Button variant="primary" type="submit" onClick={handleSubmitReg}>
-        Register
-      </Button>
-    </Form>
+<section>
+    <div className='container'>
+      <div className='row'>
+        <div className='col-md-12 reg-form'>
+          <Form id="regForm" ref={formRef} style={{ color: 'red', fontFamily: 'Raleway, sans-serif,' }}>
+          <Form.Group controlId="formName">
+            <Form.Label className='f-label'>Name</Form.Label>
+            <Form.Control
+              type="text"
+              name="name"
+              id="name"
+              required
+            />
+          </Form.Group>
+          <br></br>
+          <Form.Group controlId="formEmail">
+            <Form.Label className='f-label'>Email address</Form.Label>
+            <Form.Control
+              type="email"
+              name="email"
+              id="email"
+              required
+            />
+          </Form.Group>
+          <br></br>
+          <Form.Group controlId="formPassword">
+            <Form.Label className='f-label'>Password</Form.Label>
+            <Form.Control
+              type="password"
+              name="password"
+              id="password"
+              required
+            />
+          </Form.Group>
+          <br></br>
+          <Form.Group controlId="formCPassword">
+            <Form.Label className='f-label'>Confirm Password</Form.Label>
+            <Form.Control
+              type="password"
+              name="cpassword"
+              id="cpassword"
+              required
+            />
+          </Form.Group>
+          <br></br>
+          {error && <div className="error">{error}</div>}
+          <Button className='btnDis' type="submit" onClick={handleSubmitReg}>
+            Register
+          </Button>
+        </Form>
+        </div>
+      </div>
+    </div>
+  </section>
   );
 };
 
