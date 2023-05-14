@@ -11,10 +11,10 @@ function Shop() {
         <ShopHeader />
 
         <div className='row'>
-            <div className='col-md-9'>
+            <div className='col-md-8'>
                 <ShopMerch />
             </div>
-            <div className='col-md-3'>
+            <div className='col-md-4'>
                 <ShopCart />
             </div>
         </div>

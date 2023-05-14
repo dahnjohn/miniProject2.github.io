@@ -20,7 +20,7 @@ export default function ShopMerch() {
                             <span class="fa fa-star-half-full checked"></span>
                         </div>
                         <p className="item-price">₱1,000</p>
-                        <button className="cartBtn">ADD TO CART</button>
+                        <button className="cartBtn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> ADD TO CART</button>
                     </div>
                 </div>
                 <div className="col-md-4">
@@ -35,7 +35,7 @@ export default function ShopMerch() {
                             <span class="fa fa-star-half-full checked"></span>
                         </div>
                         <p className="item-price">₱1,000</p>
-                        <button className="cartBtn">ADD TO CART</button>
+                        <button className="cartBtn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> ADD TO CART</button>
                     </div>
                 </div>
                 <div className="col-md-4">
@@ -50,7 +50,7 @@ export default function ShopMerch() {
                             <span class="fa fa-star-half-full checked"></span>
                         </div>
                         <p className="item-price">₱1,000</p>
-                        <button className="cartBtn">ADD TO CART</button>
+                        <button className="cartBtn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> ADD TO CART</button>
                     </div>
                 </div>
                 <div className="col-md-4">
@@ -65,7 +65,7 @@ export default function ShopMerch() {
                             <span class="fa fa-star-half-full checked"></span>
                         </div>
                         <p className="item-price">₱1,000</p>
-                        <button className="cartBtn">ADD TO CART</button>
+                        <button className="cartBtn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> ADD TO CART</button>
                     </div>
                 </div>
                 <div className="col-md-4">
@@ -80,7 +80,7 @@ export default function ShopMerch() {
                             <span class="fa fa-star-half-full checked"></span>
                         </div>
                         <p className="item-price">₱1,000</p>
-                        <button className="cartBtn">ADD TO CART</button>
+                        <button className="cartBtn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> ADD TO CART</button>
                     </div>
                 </div>
                 <div className="col-md-4">
@@ -95,7 +95,7 @@ export default function ShopMerch() {
                             <span class="fa fa-star-half-full checked"></span>
                         </div>
                         <p className="item-price">₱1,000</p>
-                        <button className="cartBtn">ADD TO CART</button>
+                        <button className="cartBtn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> ADD TO CART</button>
                     </div>
                 </div>
             </div>

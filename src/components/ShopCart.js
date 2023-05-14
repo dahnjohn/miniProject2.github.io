@@ -5,10 +5,10 @@ export default function ShopCart() {
 
     return (
         <>
-        <section id="login">
-            <div className="row">
-                <div className="col-md-12 login-header">
-                    <h1 className="login-heading text-center">Cart</h1>
+        <section id="cart">
+            <div className="row mt-4">
+                <div className="col-md-12 cart-box">
+                    <p className="cart-heading text-light"> <span className="spanL">|</span> Cart</p>
                 </div>
             </div>
         </section>
