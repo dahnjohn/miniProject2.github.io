@@ -1,6 +1,8 @@
 import React from "react"
 import "./ShopMerch.css";
-import TopMain from "../images/topMain.png"
+import ItemCard from "./ItemCard";
+import data from "./data";
+// import TopMain from "../images/topMain.png"
 
 export default function ShopMerch() {
 
@@ -8,96 +10,18 @@ export default function ShopMerch() {
         <>
         <section id="merch">
             <div className="row">
-                <div className="col-md-4">
-                    <div className="merch-item">
-                        <img className="item-img" src={TopMain} alt="Main Character"/>
-                        <h4 className="item-name">White T-shirt with Logo</h4>
-                        <div className="item-rating">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star-half-full checked"></span>
-                        </div>
-                        <p className="item-price">₱1,000</p>
-                        <button className="cartBtn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> ADD TO CART</button>
-                    </div>
-                </div>
-                <div className="col-md-4">
-                    <div className="merch-item">
-                        <img className="item-img" src={TopMain} alt="Main Character"/>
-                        <h4 className="item-name">White T-shirt with Logo</h4>
-                        <div className="item-rating">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star-half-full checked"></span>
-                        </div>
-                        <p className="item-price">₱1,000</p>
-                        <button className="cartBtn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> ADD TO CART</button>
-                    </div>
-                </div>
-                <div className="col-md-4">
-                    <div className="merch-item">
-                        <img className="item-img" src={TopMain} alt="Main Character"/>
-                        <h4 className="item-name">White T-shirt with Logo</h4>
-                        <div className="item-rating">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star-half-full checked"></span>
-                        </div>
-                        <p className="item-price">₱1,000</p>
-                        <button className="cartBtn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> ADD TO CART</button>
-                    </div>
-                </div>
-                <div className="col-md-4">
-                    <div className="merch-item">
-                        <img className="item-img" src={TopMain} alt="Main Character"/>
-                        <h4 className="item-name">White T-shirt with Logo</h4>
-                        <div className="item-rating">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star-half-full checked"></span>
-                        </div>
-                        <p className="item-price">₱1,000</p>
-                        <button className="cartBtn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> ADD TO CART</button>
-                    </div>
-                </div>
-                <div className="col-md-4">
-                    <div className="merch-item">
-                        <img className="item-img" src={TopMain} alt="Main Character"/>
-                        <h4 className="item-name">White T-shirt with Logo</h4>
-                        <div className="item-rating">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star-half-full checked"></span>
-                        </div>
-                        <p className="item-price">₱1,000</p>
-                        <button className="cartBtn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> ADD TO CART</button>
-                    </div>
-                </div>
-                <div className="col-md-4">
-                    <div className="merch-item">
-                        <img className="item-img" src={TopMain} alt="Main Character"/>
-                        <h4 className="item-name">White T-shirt with Logo</h4>
-                        <div className="item-rating">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star-half-full checked"></span>
-                        </div>
-                        <p className="item-price">₱1,000</p>
-                        <button className="cartBtn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> ADD TO CART</button>
-                    </div>
-                </div>
+                {data.productData.map((item, index) => {
+                        return (
+                            <ItemCard
+                            img={item.img} 
+                            title={item.title} 
+                            desc={item.desc} 
+                            price={item.price} 
+                            item={item} 
+                            key={index} 
+                            />
+                        )
+                    })}
             </div>
         </section>
         </>

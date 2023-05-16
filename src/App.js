@@ -9,9 +9,12 @@ import Contact from './components/pages/Contact';
 import RegistrationForm from './components/pages/RegistrationForm';
 import LoginForm from './components/pages/LoginForm';
 
+import { CartProvider } from 'react-use-cart'
+
 function App() {
   return (
     <>
+    <CartProvider>
     <Router>
       < Navbar />
     <Routes>
@@ -24,6 +27,7 @@ function App() {
         <Route path='/login-form' exact Component={LoginForm} />
       </Routes>
     </Router>
+    </CartProvider>
     </>
   );
 }

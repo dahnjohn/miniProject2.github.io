@@ -11,3 +11,12 @@
 .spanL{
     color: #2CBCA5;
 }
+.cart-total{
+    font-family: 'Inter', sans-serif;
+}
+.cart-table td{
+    font-family: 'Inter', sans-serif;
+}
+.cartTotal-price h3{
+    font-family: 'Inter', sans-serif;
+}
