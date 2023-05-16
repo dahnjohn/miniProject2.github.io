@@ -12,10 +12,6 @@ import FeaturesPic6 from "../images/featuresPic6.png"
 export default function Feature(){
     return(
         <>
-        
-           
-         
-
         <div className="container featuresCon">
         <div className="row">
         <p className="featuresTittle">Features</p>

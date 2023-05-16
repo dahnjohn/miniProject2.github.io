@@ -17,8 +17,8 @@ export default function HeroSection() {
                         <button type="button" className="btn btnDis mt-3">Shop Now</button>
 
                     <div className="row mt-5">
-                    <div className="col-md-6"> Grace</div>
-                    <div className="col-md-6"> Dahn</div>
+                    <div className="col-md-6 gD"> Grace</div>
+                    <div className="col-md-6 gD"> Dahn</div>
                     </div>
                 </div>
 
