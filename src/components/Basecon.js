@@ -1,9 +1,15 @@
 import React from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 import "./Basecon.css"
 import BaseconImg from "../images/baseConImg.png";
 import RockMan from "../images/rockMan.png";
 
 export default function Basecon() {
+    const navigate = useNavigate();
+
+    const handleShopNow = () => {
+      navigate("/shop"); // Replace "/shop" with the actual path of your Shop.js component
+    };
     return(
         <div>
             <section id="about">
@@ -24,7 +30,7 @@ export default function Basecon() {
                                 this magical world, each with magical powers and unique abilities. 
                                 Train and unite your wizards into powerful guilds to increase their power 
                                 and value to you to create the perfect team.</p>
-                                <button type="button" className="btn btnDis mt-3">Shop Now</button>
+                                <button type="button" className="btn btnDis mt-3" onClick={handleShopNow}>Shop Now</button>
                         </div>
                     </div>
                 </div>
