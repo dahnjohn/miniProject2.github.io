@@ -25,20 +25,6 @@ function Shop() {
         <div className="container-fluid battleCollectionBG">
             <BattleCollection />
         </div>
-
-        <div className="container regNow">
-            <RegNow />
-        </div>
-
-        <div className="container-fluid featuresBg">
-            <Stats />
-            <Testimonial />
-            
-        </div>
-
-        <div className="container joinNowCon">
-            <JoinNow />
-        </div>
         <FooterSec />
         </>
     );

@@ -2,9 +2,10 @@
     background-image:url("../images/featureBG.png");
 }
 .contact {
-    margin: 150px 300px;
+    margin: 100px 0;
     background-color: #18253373;
-    padding: 20px 50px;
+    padding: 50px;
+    border-radius: 30px;
 }
 .contact h2{
     font-family: "Raleway", Sans-serif;
@@ -14,13 +15,14 @@
 }
 .form-group textarea {
     border-radius: 10px;
+    width: 100%;
 }
 .contact button {
     color: #fff;
     font-family: "Raleway", Sans-serif;
     font-size: 18px;
     padding: 10px 50px;
-    margin: 0 220px;
+    margin: 0 170px;
     border-radius: 50px;
     background-color: transparent;
     background-image: linear-gradient(90deg, #E75469 0%, #A93EF8 100%);
