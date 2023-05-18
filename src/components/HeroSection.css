@@ -121,3 +121,77 @@
         margin: -2px 37px;
     }
 }
+@media only screen and (min-width: 414px) and (max-width: 539px){
+    .heroSection{
+        margin-top: 0;
+        overflow-x: hidden;
+    }
+    .playCollect{
+        font-size: 12px;
+    }
+    .sloGan{
+        font-size: 35px;
+        line-height: 50px;
+    }
+    .subSlogan{
+        font-size: 16px;
+    }
+    .btnDis{
+        font-size: 15px;
+        padding: 15px 30px 15px 30px;
+    }
+    .names{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .gD {
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+    .imgBG{
+        width: 250px;
+        margin: 15px 61px;
+    }
+    .topSide{
+        width: 300px;
+        height: 300px;
+        margin: -2px 37px;
+    }
+}
+@media only screen and (min-width: 540px) and (max-width: 767px){
+    .heroSection{
+        margin-top: 0;
+        overflow-x: hidden;
+    }
+    .playCollect{
+        font-size: 12px;
+    }
+    .sloGan{
+        font-size: 35px;
+        line-height: 50px;
+    }
+    .subSlogan{
+        font-size: 16px;
+    }
+    .btnDis{
+        font-size: 15px;
+        padding: 15px 30px 15px 30px;
+    }
+    .names{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .gD {
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+    .imgBG{
+        width: 372px;
+        margin: 15px 61px;
+    }
+    .topSide{
+        width: 332px;
+        height: 371px;
+        margin: -2px 37px;
+    }
+}

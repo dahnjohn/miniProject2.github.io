@@ -93,3 +93,53 @@
             font-size: 16px;
         }
     }
+    @media only screen and (min-width: 414px) and (max-width: 539px){
+        .baseConContainer{
+            margin: 50px 0;
+            display: flex;
+            flex-flow: column-reverse;
+        }
+        .baseconImgBG{
+            height: 200px;
+            margin-right: 20px;
+        }
+        .rockMan{
+            left: 208px;
+            width: 130px;
+            top: 1690px
+        }
+        .baseConcept{
+            font-size: 12px;
+        }
+        .baseConceptTittle{
+            font-size: 30px;
+        }
+        .baseConceptDesc{
+            font-size: 16px;
+        }
+    }
+    @media only screen and (min-width: 540px) and (max-width: 767px){
+        .baseConContainer{
+            margin: 50px 0;
+            display: flex;
+            flex-flow: column-reverse;
+        }
+        .baseconImgBG{
+            height: 271px;
+            margin-right: 20px;
+        }
+        .rockMan{
+            left: 284px;
+            width: 130px;
+            top: 1596px;
+        }
+        .baseConcept{
+            font-size: 12px;
+        }
+        .baseConceptTittle{
+            font-size: 30px;
+        }
+        .baseConceptDesc{
+            font-size: 16px;
+        }
+    }

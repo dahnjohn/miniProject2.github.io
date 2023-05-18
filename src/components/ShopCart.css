@@ -20,3 +20,18 @@
 .cartTotal-price h3{
     font-family: 'Inter', sans-serif;
 }
+@media only screen and (min-width: 412px) and (max-width: 539px){
+    .cart-box{
+        margin: 16px 0;
+    }
+}
+@media only screen and (min-width: 414px) and (max-width: 539px){
+    .cart-box{
+        margin: 16px 0;
+    }
+}
+@media only screen and (min-width: 540px) and (max-width: 767px){
+    .cart-box{
+        margin: 16px 0;
+    }
+}

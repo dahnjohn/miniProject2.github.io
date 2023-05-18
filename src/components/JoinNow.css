@@ -36,3 +36,35 @@
         font-size: 16px;
     }
 }
+@media only screen and (min-width: 414px) and (max-width: 539px){
+    .joinNowCon{
+        overflow: hidden;
+    }
+    .joinNowRow{
+        margin-top: 80px;
+        padding: 0;
+    }
+    .joinNowTittle{
+        padding: 20px 0;
+        font-size: 30px;
+    }
+    .joinNowDesc{
+        font-size: 16px;
+    }
+}
+@media only screen and (min-width: 540px) and (max-width: 767px){
+    .joinNowCon{
+        overflow: hidden;
+    }
+    .joinNowRow{
+        margin-top: 80px;
+        padding: 0;
+    }
+    .joinNowTittle{
+        padding: 20px 0;
+        font-size: 30px;
+    }
+    .joinNowDesc{
+        font-size: 16px;
+    }
+}
