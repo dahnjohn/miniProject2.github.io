@@ -82,3 +82,21 @@
     animation: float 6s ease-in-out infinite;
 
 }
+@media only screen and (min-width: 412px) and (max-width: 413px){
+    .featuresTittle{
+        font-size: 12px;
+    }
+    .featuresPte{
+        font-size: 30px;
+    }
+    .featuresDesc{
+        font-size: 16px;
+    }
+    .featuresCard-img{
+        width: 50px;
+        
+    }
+    .featuresCard{
+        margin: 10px 0;
+    }
+}

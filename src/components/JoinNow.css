@@ -20,3 +20,19 @@
     font-weight: 400;
     line-height: 1.9em;
 }
+@media only screen and (min-width: 412px) and (max-width: 413px){
+    .joinNowCon{
+        overflow: hidden;
+    }
+    .joinNowRow{
+        margin-top: 80px;
+        padding: 0;
+    }
+    .joinNowTittle{
+        padding: 20px 0;
+        font-size: 30px;
+    }
+    .joinNowDesc{
+        font-size: 16px;
+    }
+}

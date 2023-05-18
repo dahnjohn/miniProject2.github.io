@@ -26,13 +26,13 @@ export default function HeroSection() {
                 Shop Now
               </button>
 
-              <div className="row mt-5">
+              <div className="row mt-5 names">
                 <div className="col-md-6 gD">Grace</div>
                 <div className="col-md-6 gD">Dahn</div>
               </div>
             </div>
 
-            <div className="col-md-6 mb-5">
+            <div className="col-md-6 mb-5 hero-photos">
               <div className="row mb-3">
                 <img className="topSide" src={TopMainBG} alt="Main Character" />
                 <img className="imgBG" src={TopMain} alt="Main Character" />

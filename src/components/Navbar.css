@@ -33,3 +33,12 @@ nav{
 .li-btnLogin{
     margin: 9px;
 }
+.navbar-toggler-icon{
+    border: 1px solid #505050;
+    color: #ffffff;
+}
+@media only screen and (min-width: 412px) and (max-width: 413px){
+    .textLogo{
+        font-size: 30px;
+    }
+}

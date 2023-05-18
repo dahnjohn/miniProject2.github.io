@@ -39,7 +39,7 @@
     }
     
     .baseConcept{
-        text-align: leftceleftnter;
+        text-align: left;
         color: #2CBCA5;
         font-family: "Inter", Sans-serif;
         font-size: 16px;
@@ -68,4 +68,28 @@
         font-weight: 400;
         line-height: 1.9em;
     }
-    
+    @media only screen and (min-width: 412px) and (max-width: 413px){
+        .baseConContainer{
+            margin: 50px 0;
+            display: flex;
+            flex-flow: column-reverse;
+        }
+        .baseconImgBG{
+            height: 200px;
+            margin-right: 20px;
+        }
+        .rockMan{
+            left: 208px;
+            width: 130px;
+            top: 1690px
+        }
+        .baseConcept{
+            font-size: 12px;
+        }
+        .baseConceptTittle{
+            font-size: 30px;
+        }
+        .baseConceptDesc{
+            font-size: 16px;
+        }
+    }

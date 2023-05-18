@@ -8,7 +8,6 @@ import BattleCollectPic2 from "../images/battleCollectPic2.png"
 export default function BattleCollection(){
     return(
         <>
-      
             <div className="container  battleCollection">
             <div className="row">
                 <div className="col-md-6">
